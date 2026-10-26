@@ -1,0 +1,130 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Quicksand', sans-serif;  
+}
+
+nav a{
+      text-decoration: none;
+      color: white;
+}
+
+nav{
+  background-color:rgb(66, 182, 228);
+}
+
+nav ul{
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+a:hover{
+  color: rgb(219, 103, 188);
+  font-weight: bold;
+}
+
+a:hover::after{
+  content:"🦩";
+}
+
+body > header {
+  background-color: rgb(104, 200, 238);
+  color: white;
+  padding-top: 30px;
+}
+header h1{
+  text-align: center;
+  color: white;
+
+}
+
+header p{
+  text-align: center;
+  color: white;
+  padding-bottom:30px ;
+  padding-left: 29px;
+  padding-right: 29px;
+}
+
+main {
+  display: flex;
+  margin: 40px;
+  gap: 20px
+}
+
+#content {
+  /* flex 3 artinya pembagian luasnya 75% */
+  flex: 3;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#content h2{
+   display: flex;
+  padding: 20px;
+  border-radius: 5px;
+  color: rgb(39, 122, 199);
+}
+
+#content h3{
+  display: flex;
+  padding: 20px;
+  border-radius: 5px;
+  color: rgb(39, 122, 199);
+}
+
+#content p{
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#content img{
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+aside {
+  flex: 1;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: rgb(39, 122, 199);
+}
+
+aside img{
+  flex: 1;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+aside section{
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+article section{
+  margin: 20px;
+}
+
+/* kode ini berfungsi untuk menyembunyikan semua artikel yang ada di dalam content hanya ketika salah satu menu navigasinya diklik */
+#content:has(:target) > article {
+    display: none;
+}
+
+/* tampilkan artikel yang sedang diklik saja */
+#content > article:target {
+    display: block;
+}
